@@ -1,0 +1,50 @@
+{% from "govuk/components/back-link/macro.njk" import govukBackLink -%}
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  S4 Links – {{ serviceName }}
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Download the Files
+    </h1>
+
+    <p class="govuk-body">
+      Before starting the task, download both of the files below.
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="https://drive.proton.me/urls/74GND3BQP4#6XDOEvTgrkXL" download>
+          Download the Conditionals Worksheet
+        </a>
+      </li>
+
+      <li>
+        <a class="govuk-link" href="https://drive.proton.me/urls/WG03QFGZXG#UgFrHEvzjIT2" download>
+          Download the NumberGrabber Visual Basic File
+        </a>
+      </li>
+    </ul>
+
+    <p class="govuk-body">
+      Open the worksheet first and read the instructions carefully.
+      Then extract the ZIP folder and open the Visual Basic project in
+      Visual Studio 2010.
+    </p>
+
+  </div>
+</div>
+{% endblock %}
